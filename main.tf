@@ -23,6 +23,7 @@ resource "azurerm_managed_disk" "source" {
 
 
 module "snapshot-vm-one" {
+  # count = var.instance_count
   source = "./module"
   managed_disk_id                = azurerm_managed_disk.source.id
   managed_disk_type              = azurerm_managed_disk.source.storage_account_type
