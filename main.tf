@@ -26,7 +26,7 @@ module "snapshot-vm-one" {
   source = "./module"
   managed_disk_id                = azurerm_managed_disk.source.id
   managed_disk_type              = azurerm_managed_disk.source.storage_account_type
-  azurerm_resource_group = data.azurerm_resource_group.tfm.name
+  azurerm_resource_group         = data.azurerm_resource_group.tfm.name
 
   
   # New name
