@@ -2,10 +2,6 @@ data "azurerm_resource_group" "tf" {
   name = var.azurerm_resource_group                          # Disk resource group name
 }
 
-data "azurerm_managed_disk" "tf" {
-  name                = var.azurerm_managed_disk_name        # Disk name
-  resource_group_name = data.azurerm_resource_group.tf.name
-}
 
 data "azurerm_subnet" "tf" {
   name                 = var.subnet_name                     # subnet name
