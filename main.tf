@@ -33,7 +33,6 @@ module "snapshot-vm-one" {
   vm_name = "pspl-snapshot-vm"
   # New VM size 
   vm_size = "Standard_LRS"
-  # Disk resource group name
   # Subnet name
   subnet_name = "default"
   # virtual network name
