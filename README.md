@@ -15,3 +15,10 @@ terraform apply -var-file=config.tfvars -auto-approve
     
  ```
 
+Specific Environment destroy
+
+```bash
+
+terraform destroy -target module.snapshot-vm-one
+
+```
