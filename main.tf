@@ -7,13 +7,13 @@ module "snapshot-vm-one" {
 
   ## Change here
   # New name
-  vm_name = "pspl-snapshot-vm"
+  vm_name                        = "pspl-snapshot-vm"
   # New VM size 
-  vm_size = "Standard_LRS"
+  vm_size                        = "Standard_LRS"
   # Subnet name
-  subnet_name = "default"
+  subnet_name                    = "default"
   # virtual network name
-  subnet_virtual_network_name = "PSPL_ITDev"
+  subnet_virtual_network_name    = "PSPL_ITDev"
   # networking resource group name
   network_azurerm_resource_group = "PSPL_ITDev"
   # Tag name
