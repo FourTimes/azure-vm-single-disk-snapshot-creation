@@ -22,3 +22,12 @@ Specific Environment destroy
 terraform destroy -target module.snapshot-vm-one
 
 ```
+
+
+Specific Environment destroy
+
+```bash
+
+terraform destroy
+
+```
