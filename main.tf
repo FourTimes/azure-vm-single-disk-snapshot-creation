@@ -1,11 +1,11 @@
 module "snapshot-vm-one" {
-  # count = var.instance_count
+  # Do not chage here
   source = "./module"
   managed_disk_id                = azurerm_managed_disk.source.id
   managed_disk_type              = azurerm_managed_disk.source.storage_account_type
   azurerm_resource_group         = data.azurerm_resource_group.tfm.name
 
-  
+  ## Change here
   # New name
   vm_name = "pspl-snapshot-vm"
   # New VM size 
