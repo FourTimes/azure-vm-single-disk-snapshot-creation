@@ -15,7 +15,7 @@ resource "azurerm_managed_disk" "source" {
   resource_group_name  = data.azurerm_resource_group.tfm.name
   storage_account_type = "Standard_LRS"
   create_option        = "Copy"
-  source_resource_id   = azurerm_snapshot.tfm.source_uri
+  source_resource_id   = azurerm_snapshot.tf.source_uri
   depends_on = [
     azurerm_snapshot.tf
   ]
