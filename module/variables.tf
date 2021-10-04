@@ -5,5 +5,4 @@ variable "subnet_virtual_network_name" {}
 variable "network_azurerm_resource_group" {}
 variable "vm_size" {}
 variable "additional_tags" {}
-variable "managed_disk_id" {}
-variable "managed_disk_type" {}
+variable "source_resource_id" {}

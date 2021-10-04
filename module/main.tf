@@ -1,3 +1,12 @@
+# convert snapshot into managed disk
+resource "azurerm_managed_disk" "source" {
+  name                 = "disk_${var.vm_name}"
+  location             = data.azurerm_resource_group.tf.location
+  resource_group_name  = data.azurerm_resource_group.tf.name
+  storage_account_type = "Standard_LRS"
+  create_option        = "Copy"
+  source_resource_id   = var.source_resource_id # azurerm_snapshot.tf.source_uri
+}
 
 resource "azurerm_public_ip" "tf" {
   name                = "IP_${var.vm_name}"
@@ -36,8 +45,8 @@ resource "azurerm_virtual_machine" "tf" {
       name                      = "disk_${var.vm_name}"
       os_type                   = "Windows"
       write_accelerator_enabled = false
-      managed_disk_id           =  var.managed_disk_id  # azurerm_managed_disk.source.id
-      managed_disk_type         = var.managed_disk_type # azurerm_managed_disk.source.storage_account_type
+      managed_disk_id           = azurerm_managed_disk.source.id
+      managed_disk_type         = azurerm_managed_disk.source.storage_account_type
       disk_size_gb              = 128
     }
   depends_on = [

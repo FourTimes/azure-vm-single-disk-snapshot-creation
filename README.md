@@ -1,4 +1,4 @@
-# azure-os-disk-snapshot-vm
+ # azure-os-disk-snapshot-vm
 
 variable change required
 
@@ -11,7 +11,7 @@ variable change required
 
 terraform init
 terraform plan -var-file=config.tfvars
-terraform apply -var-file=config.tfvars -auto-approve
+terraform plan -var-file=config.tfvars
     
  ```
 
@@ -24,7 +24,7 @@ terraform destroy -target module.snapshot-vm-one
 ```
 
 
-Specific Environment destroy
+ Environment destroy
 
 ```bash
 
